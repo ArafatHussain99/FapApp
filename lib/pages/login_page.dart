@@ -1,3 +1,4 @@
+import 'package:day1/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class Login_page extends StatefulWidget {
@@ -62,7 +63,11 @@ class _Login_pageState extends State<Login_page> {
             padding: const EdgeInsets.all(8.0),
             child: Container(
                 width: 300,
-                child: ElevatedButton(onPressed: () {}, child: Text("Login"))),
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.welcomeRoute);
+                    },
+                    child: Text("Login"))),
           ),
         ],
       ),

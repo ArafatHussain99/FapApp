@@ -1,5 +1,8 @@
+import 'package:day1/pages/fap.dart';
+import 'package:day1/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
+import 'pages/welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: Login_page(title: 'Login Page'),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => Login_page(title: 'Login Page'),
+        MyRoutes.welcomeRoute: (context) => Welcome(),
+        MyRoutes.fapRoute: (context) => Fap_page(),
+      },
     );
   }
 }
